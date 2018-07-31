@@ -1,0 +1,32 @@
+body {
+    color: lime;
+    background-image: url("../imagens/html.jpg");
+    background-attachment: fixed;
+}
+p {
+    font-size: 22px;
+    line-height: 1.5em;
+    max-width: 50em;
+    background-color: blue;
+}
+h1 {
+    color: blue;
+    background-color: #00ffff;
+}
+h2 {
+    color: #ff0000;
+    background-color: #00ffff;
+}
+h3 {
+    color: #ffa500;
+    background-color: #00ffff;
+}
+ul {
+    background-color: teal;
+}
+li {
+    background-color: navy;
+}
+a {
+    color: lime;
+}

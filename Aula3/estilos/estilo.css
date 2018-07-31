@@ -1,0 +1,9 @@
+body{
+    background-color: blueviolet;
+    background-image: url("../imagens/html.jpg");
+    background-repeat: repeat;
+}
+
+h1 {
+    color: salmon;
+}
