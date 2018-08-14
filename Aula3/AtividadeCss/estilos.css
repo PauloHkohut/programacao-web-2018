@@ -2,6 +2,7 @@ body {
     color: lime;
     background-image: url("../imagens/html.jpg");
     background-attachment: fixed;
+    
 }
 p {
     font-size: 22px;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio Aula7</title>
+</head>
+<body>
+    <div id="conteudo">
+
+    </div>
+
+    <script>
+        var divConteudo = document.getElementById('conteudo')
+        var nome = prompt('Informe seu nome.')
+        var anoNascimento = prompt('Informe o ano de seu nascimento.')
+        
+        if (anoNascimento >= 18){
+            divConteudo.innerText = 'Esse conteúdo é permitido para você.'
+        }else{
+            divConteudo.innerHTML = 'Conteúdo não permitido clique aqui > <a href="http://www.disney.com">OK</a>'    
+        }
+    </script>
+</body>
+</html>
