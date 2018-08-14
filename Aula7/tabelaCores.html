@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabela de Cores</title>
+    <script>
+        var r = new Array("00","33","66","99","CC","FF")
+        var g = new Array("00","33","66","99","CC","FF")
+        var b = new Array("00","33","66","99","CC","FF")
+    </script>
+</head>
+<body>
+    <table>
+        <script>
+            for(var ir in r){
+                for(var ig in g){
+                    document.write('<tr>')
+                    for(var ib in b){
+                        var cor = '#' + r[ir] + g[ig] + b[ib]
+                        document.write('<td bgcolor=\'' + cor + '\'>')
+                        document.write(cor)
+                        document.write('</td>')
+                    }
+                    document.write('</tr>')
+                }
+            }
+        </script>
+    </table>
+</body>
+</html>
