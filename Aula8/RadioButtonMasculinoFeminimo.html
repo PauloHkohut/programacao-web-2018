@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radio</title>
+
+
+    <script>
+        function enviarFormulario(){
+            //console.log(document.cadastro.sexo.value)
+            var sexoSelecionado = document.cadastro.sexo.value;
+            if (sexoSelecionado === 'm'){
+                alert('Selecionou masculino');
+            }else if (sexoSelecionado === 'f'){
+                alert('Selecionou feminino');
+            }else {
+                //para esta opcao tire o checked do input
+                alert('Selecione uma opção!');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form name="cadastro">
+        <input type="radio" name="sexo" checked value="m"/>
+        <label>Masculino</label><br/>
+        <input type="radio" name="sexo" value="f"/>
+        <label>Feminimo</label><br/>
+        <button onclick="enviarFormulario()" type="button">Salvar</button>
+    </form>
+</body>
+</html>

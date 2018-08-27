@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tabela de Cores</title>
+    <title>TExto Invertido</title>
+
     <script>
         var r = new Array("00","33","66","99","CC","FF")
         var g = new Array("00","33","66","99","CC","FF")
@@ -19,6 +20,7 @@
                     document.write('<tr>')
                     for(var ib in b){
                         var cor = '#' + r[ir] + g[ig] + b[ib]
+                        var textColor = "#" + 
                         document.write('<td bgcolor=\'' + cor + '\'>')
                         document.write(cor)
                         document.write('</td>')

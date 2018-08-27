@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário com JavaScript</title>
+
+    <script>
+        function calcular(){
+            var operador1 = parseInt(document.calculadora.operador1.value)
+            var operador2 = parseInt(document.calculadora.operador2.value)
+            var resultado = operador1 + operador2
+            //alert(resultado)
+            document.calculadora.resultado.value = resultado
+        }
+    </script>
+
+</head>
+<body>
+
+    <form name="calculadora">
+        <input type="text" name="operador1" placeholder="Operador 1"><br/>
+        <input type="text" name="operador2" placeholder="Operador 2"><br/>
+        <button type="button" onclick="calcular()">Calcular</button><br/>
+
+        <input type="text" name="resultado" placeholder="Resultado" readonly>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+    
+    <style>
+        .error{
+            color: red;
+        }
+        .inputError{
+            border: solid 1px red;
+        }
+        .inputSucess{
+            border: solid 1px green;
+        }
+    </style>
+
+<script>
+        function removerTitulo(){
+            document.getElementById('titulo').style = "opacity: 0";
+        }
+        function exibirTitulo(){
+            document.getElementById('titulo').style = "opacity: 1";
+        }
+
+        var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        function checarEmail(input, divErrorId){
+            var emailValido = regex.test(input.value);
+            var divEmailError = document.getElementById(divErrorId);
+            if (emailValido){
+                divEmailError.textContent = '';
+                input.className = 'inputSucess'
+            } else {
+                divEmailError.textContent = 'Informe um endereço de email válido.'
+                input.className = 'inputError'
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1 
+        id="titulo" 
+        onmouseover="removerTitulo()" 
+        onmouseout="exibirTitulo()">
+        Aula de Eventos em JavaScript
+    </h1>
+    <!--usar a variavel da classe usar o this, neste caso ta apontando para o input-->
+    <input 
+        type="text" 
+        onchange="checarEmail(this, 'email-error')" 
+        placeholder="Informe o email." />
+    
+    <div id="email-error" class="error"></div>
+    <br />
+
+    <input 
+        type="text" 
+        onchange="checarEmail(this, 'repetir-email-error')" 
+        placeholder="Informe o email novamente." />
+    
+    <div id="repetir-email-error" class="error"></div>
+</body>
+</html>
