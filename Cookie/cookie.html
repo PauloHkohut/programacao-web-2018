@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookie</title>
+    <script>
+        function criarCookie(){
+            var email = prompt('Digite seu email.","');
+            var meuEmail = 'Nome=' + escape(email);
+            document.cookie = meuEmail;
+            alert('Obrigado!');
+        }
+
+        function checkCookie(){
+            var username = getCookie("username");
+            if (username !== null && username !== ""){
+                alert("Bem vindo novamente " + username + "!");
+            }else {
+                username = prompt("Por favor, informe seu email: ","");
+            }
+            if (username !== null && username !== ""){
+                setCookie("username",username,365);
+            }else {
+                criarCookie();
+            }
+        }
+        function setCookie(c_name, value, expiredays){
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + expiredays);
+            if (expiredays == null){
+                expiredays = "";
+            }else {
+                expiredays = "expires=" + exdate.toGMTString();
+                document.cookie = c_name + "=" + escape(value) + expiredays;
+            }
+        }
+        function getCookie(){
+            if (document.cookie.length > 0){
+                c_start = document.cookie.indexOf(c_name + '=');
+                 if (c_start != -1){
+                     c_start = c_start + c_name.length +1;
+                     c_end = document.cookie.indexOf(';', c_start);
+                      if (c_end == -1){
+                          c_end = document.cookie.length;
+                          return unescape(document.cookie.substring(c_start, c_end));
+                      }
+                    }
+                 return '';
+            }
+        }
+    </script>
+</head>
+<body onload="checkCookie()">
+    <input type="button" value="Criar Cookie" onclick="criarCookie()" />
+    
+</body>
+</html>

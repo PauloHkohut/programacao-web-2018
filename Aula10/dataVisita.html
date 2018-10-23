@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data da ultima visita</title>
+
+    <script>
+        function salvarDataVisita(){
+            var dataAtual = new Date();
+            var dataCodificada = escape(dataAtual.toLocaleDateString())
+            document.cookie = 'última_visita=' + dataCodificada 
+        }
+        function lerDataVisita(){
+            if (document.cookie){
+                var partes = doc
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Bem-vindo à aula de JavaScript</h1>
+
+</body>
+</html>

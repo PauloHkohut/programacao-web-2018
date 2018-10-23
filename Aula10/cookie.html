@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookies</title>
+
+    <script>
+        function ler(){
+            var partes = document.cookie.split('=')// Array ['nome', 'Paulo%20Henrique']
+            var valor  = partes[1] //'Paulo%20Henrique'
+            var valorDecodificado = unescape(valor) // 'Paulo Henrique'
+
+            alert('Seu nome é: ' + valorDecodificado)
+        }
+        function gravar(){
+            var nome = prompt('Informe o seu nome:') //'Paulo Henrique'
+            var nomeCodificado = escape(nome) // 'Paulo%20Henrique'
+
+            document.cookie = 'nome=' + nomeCodificado //'nome=Paulo%20Henrique' 
+            alert('Obrigado!')
+        }
+    </script>
+
+</head>
+<body>
+
+    <input type="button" onclick="ler()" value="Ler"/><br/>
+    <input type="button" onclick="gravar()" value="Gravar"/>
+    
+</body>
+</html>
